@@ -48,6 +48,7 @@ app.use(expressSession({
   cookie: {
     httpOnly: true,
     secure: false, // https를 쓸 때 true
+    domain: prod && '.marshio.com',
   },
   name: 'rnbck',
 }));
