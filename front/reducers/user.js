@@ -164,7 +164,7 @@ export default (state = initialState, action) => {
         break; 
       }
       case LOAD_FOLLOWERS_FAILURE: {
-        breakl
+        break;
       }
       case LOAD_FOLLOWINGS_REQUEST: {
         draft.followingList = !action.offset ? [] : draft.followingList;
