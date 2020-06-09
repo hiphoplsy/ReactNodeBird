@@ -101,7 +101,7 @@ export default (state = initialState, action) => {
         break;
       }
       case SIGN_UP_FAILURE: {
-        draft.isSigningUp = fasle;
+        draft.isSigningUp = false;
         draft.signUpErrorReason = action.error;
         break;
       }
