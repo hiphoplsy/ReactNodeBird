@@ -26,7 +26,7 @@ if (prod) {
   app.use(helmet());
   app.use(morgan('combined'));
   app.use(cors({
-    origin: /nodebird\.com$/,
+    origin: /marshio\.com$/,
     credentials: true,
   }));
 } else {
