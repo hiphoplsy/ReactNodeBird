@@ -10,7 +10,7 @@ const { isLoggedIn, postExist } = require('./middleware');
 const router = express.Router();
 
 AWS.config.update({
-  region: 'us-east-2',
+  region: 'ap-northeast-2',
   accessKeyId: process.env.S3_ACCESS_KEY_ID,
   secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
 });
