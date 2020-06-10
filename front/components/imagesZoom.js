@@ -13,6 +13,7 @@ const ImagesZoom = ({ images, onClose }) => {
         <CloseBtn type="close" onClick={onClose} />
       </Header>
       <SlickWrapper >
+        <div>
         <Slick
           initialSlide={0}
           afterChange={(slide) => setCurrentSlide(slide)}
@@ -30,9 +31,11 @@ const ImagesZoom = ({ images, onClose }) => {
           })}
         </Slick>
         <Indicator>
-        <div style={{ }}>
-          {currentSlide + 1} / {images.length} </div>
+        <div>
+          {currentSlide + 1} / {images.length} 
+        </div>
         </Indicator>
+        </div>
       </SlickWrapper>
     </Overlay>
   );
