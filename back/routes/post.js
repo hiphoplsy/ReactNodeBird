@@ -10,9 +10,9 @@ const { isLoggedIn, postExist } = require('./middleware');
 const router = express.Router();
 
 AWS.config.update({
-  region: 'us-east-2',
   accessKeyId: process.env.S3_ACCESS_KEY_ID,
   secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+  region: 'us-east-2',
 });
 
 const upload = multer({
