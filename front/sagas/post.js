@@ -170,15 +170,15 @@ function* watchLoadComments() {
   yield takeLatest(LOAD_COMMENTS_REQUEST, LoadComments);
 }
 
-function UploadImagesAPI(formData) {
+function uploadImagesAPI(formData) {
   return axios.post('/post/images', formData, {
     withCredentials: true,
   });
 }
 
-function* UploadImages(action) {
+function* uploadImages(action) {
   try {
-    const result = yield call(UploadImagesAPI, action.data);
+    const result = yield call(uploadImagesAPI, action.data);
     yield put({
       type: UPLOAD_IMAGES_SUCCESS,
       data: result.data,
@@ -193,7 +193,7 @@ function* UploadImages(action) {
 }
 
 function* watchUploadImages() {
-  yield takeLatest(UPLOAD_IMAGES_REQUEST, UploadImages);
+  yield takeLatest(UPLOAD_IMAGES_REQUEST, uploadImages);
 }
 
 function likePostAPI(postId) {
